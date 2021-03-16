@@ -30,6 +30,19 @@ class Model {
         return
       }
       
+      do {
+        // memasukan data ke dalam project video
+        
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        
+        let response = try decoder.decode(Response.self, from: data!)
+        
+        dump(response)
+      }
+      catch{
+        
+      }
     }
     // mulai kerja
     dataTask.resume()

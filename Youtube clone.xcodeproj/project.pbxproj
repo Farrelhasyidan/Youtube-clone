@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F439D1EA25FF11C900521929 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439D1E925FF11C900521929 /* Video.swift */; };
 		F439D1ED25FF12E100521929 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439D1EC25FF12E100521929 /* Model.swift */; };
+		F439D1F026006CD800521929 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439D1EF26006CD800521929 /* Response.swift */; };
 		F4A59E9425FF0C5D00A2F339 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A59E9325FF0C5D00A2F339 /* AppDelegate.swift */; };
 		F4A59E9625FF0C5D00A2F339 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A59E9525FF0C5D00A2F339 /* SceneDelegate.swift */; };
 		F4A59E9825FF0C5D00A2F339 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A59E9725FF0C5D00A2F339 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		F439D1E925FF11C900521929 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		F439D1EC25FF12E100521929 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F439D1EF26006CD800521929 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		F4A59E9025FF0C5D00A2F339 /* Youtube clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4A59E9325FF0C5D00A2F339 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4A59E9525FF0C5D00A2F339 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				F4A59EA825FF0D6000A2F339 /* Constants.swift */,
 				F439D1E925FF11C900521929 /* Video.swift */,
 				F439D1EC25FF12E100521929 /* Model.swift */,
+				F439D1EF26006CD800521929 /* Response.swift */,
 			);
 			path = "Youtube clone";
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				F439D1ED25FF12E100521929 /* Model.swift in Sources */,
 				F4A59EA925FF0D6000A2F339 /* Constants.swift in Sources */,
 				F439D1EA25FF11C900521929 /* Video.swift in Sources */,
+				F439D1F026006CD800521929 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
