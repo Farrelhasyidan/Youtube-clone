@@ -7,14 +7,22 @@
 
 import Foundation
 
+protocol ModelDelegate {
+  
+  func videosFatched(_ videos: [Video])
+  
+}
+
 class Model {
   
-  // buat fungsi untuk mengambil data dari youtube API
+  var delegate: ModelDelegate?
+  
+  // buat fungsi untuk ngambil data dari Youtube API
   func getVideo(){
     // simpan url ke dalam variabel
     let url = URL(string: Contsants.API_URL)
     
-    // kita cek urlnya kosong tidak?
+    // kita cek urlnya kosong gak?
     guard url != nil else {
       return
     }
@@ -23,28 +31,37 @@ class Model {
     let session = URLSession.shared
     
     // mendapatkan data dari URLSession
-    let dataTask = session.dataTask(with: url!){ (data, response, error) in
+    let dataTask = session.dataTask(with: url!) { (data, response, error) in
       
-      // cek jika ada error
+      // cek kalo ada error
       if error != nil || data == nil{
         return
       }
       
       do {
-        // memasukan data ke dalam project video
+        // parsing the data into video project
+        // memasukkan data ke dalam project video
         
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         
         let response = try decoder.decode(Response.self, from: data!)
         
+        if response.items != nil{
+          DispatchQueue.main.async {
+            self.delegate?.videosFatched(response.items!)
+          }
+        }
+        
         dump(response)
-      }
-      catch{
+        
+      } catch{
         
       }
+      
     }
-    // mulai kerja
+    
+    // mulai bekerja
     dataTask.resume()
   }
 }
