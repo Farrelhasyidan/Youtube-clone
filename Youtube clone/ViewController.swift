@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDataSource, ModelDelegate, UITableViewDelegate {
+
   
   var model = Model()
   var videos = [Video]()
@@ -28,8 +29,8 @@ class ViewController: UIViewController,UITableViewDataSource, ModelDelegate, UIT
     model.getVideo()
   }
   
-  func videosFacthed(_ video: [Video]) {
-    self.videos = video
+  func videosFatched(_ videos: [Video]) {
+    self.videos = videos
     
     tableView.reloadData()
   }

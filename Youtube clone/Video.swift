@@ -7,14 +7,16 @@
 
 import Foundation
 
-struct Video: Decodable {
+
+struct Video : Decodable {
   var videoId = ""
   var title = ""
   var description = ""
   var thumbnail = ""
   var published = Date()
   
-  enum CodingKeys: String, CodingKey {
+  enum CodingKeys: String, CodingKey{
+    
     case snippet
     case thumbnails
     case high
@@ -27,7 +29,9 @@ struct Video: Decodable {
     case videoId
     
   }
-  init (from decoder: Decoder) throws {
+  
+  init(from decoder: Decoder) throws {
+    
     let container = try decoder.container(keyedBy: CodingKeys.self)
     
     let snippetContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .snippet)
@@ -38,7 +42,7 @@ struct Video: Decodable {
     
     self.published = try snippetContainer.decode(Date.self, forKey: .published)
     
-    let thumbnailContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .thumbnail)
+    let thumbnailContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .thumbnails)
     
     let highContainer = try thumbnailContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .high)
     
@@ -47,5 +51,6 @@ struct Video: Decodable {
     let resourceIdContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .resourceId)
     
     self.videoId = try resourceIdContainer.decode(String.self, forKey: .videoId)
+    
   }
 }
