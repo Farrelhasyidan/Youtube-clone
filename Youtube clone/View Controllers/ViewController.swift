@@ -42,10 +42,6 @@ class ViewController: UIViewController,UITableViewDataSource, ModelDelegate, UIT
     
     cell.setCell(video)
     
-    let title = self.videos[indexPath.row].title
-    
-    cell.textLabel?.text = title
-    
     return cell
     
   }
