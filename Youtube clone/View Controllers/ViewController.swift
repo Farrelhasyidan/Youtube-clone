@@ -55,12 +55,15 @@ class ViewController: UIViewController,UITableViewDataSource, ModelDelegate, UIT
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    // ngecek ada video yang di pilih
     guard tableView.indexPathForSelectedRow != nil else {
       return
     }
     
+    // buat variabel video yang di pilih
     let selectedVideo = videos[tableView.indexPathForSelectedRow!.row]
     
+    // buat variabel halaman detail
     let detailVC = segue.destination as! DetailViewController
     
     detailVC.video = selectedVideo
