@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4377C7F26047FA00015005E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4377C7E26047FA00015005E /* WebKit.framework */; };
 		F439D1EA25FF11C900521929 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439D1E925FF11C900521929 /* Video.swift */; };
 		F439D1ED25FF12E100521929 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439D1EC25FF12E100521929 /* Model.swift */; };
 		F439D1F026006CD800521929 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439D1EF26006CD800521929 /* Response.swift */; };
@@ -19,9 +20,11 @@
 		F4A59E9D25FF0C6000A2F339 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4A59E9C25FF0C6000A2F339 /* Assets.xcassets */; };
 		F4A59EA025FF0C6000A2F339 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A59E9E25FF0C6000A2F339 /* LaunchScreen.storyboard */; };
 		F4A59EA925FF0D6000A2F339 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A59EA825FF0D6000A2F339 /* Constants.swift */; };
+		F4E14AA426045881000B48A6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E14AA326045881000B48A6 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F4377C7E26047FA00015005E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F439D1E925FF11C900521929 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		F439D1EC25FF12E100521929 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F439D1EF26006CD800521929 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		F4A59E9F25FF0C6000A2F339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4A59EA125FF0C6000A2F339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4A59EA825FF0D6000A2F339 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F4E14AA326045881000B48A6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,12 +47,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4377C7F26047FA00015005E /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4377C7D26047FA00015005E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4377C7E26047FA00015005E /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F48B37252602FAA9001E2EB1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				F4A59E9725FF0C5D00A2F339 /* ViewController.swift */,
+				F4E14AA326045881000B48A6 /* DetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -98,6 +112,7 @@
 			children = (
 				F4A59E9225FF0C5D00A2F339 /* Youtube clone */,
 				F4A59E9125FF0C5D00A2F339 /* Products */,
+				F4377C7D26047FA00015005E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,6 +217,7 @@
 				F439D1ED25FF12E100521929 /* Model.swift in Sources */,
 				F4A59EA925FF0D6000A2F339 /* Constants.swift in Sources */,
 				F48B372B2602FDD7001E2EB1 /* VideoTableViewCell.swift in Sources */,
+				F4E14AA426045881000B48A6 /* DetailViewController.swift in Sources */,
 				F439D1EA25FF11C900521929 /* Video.swift in Sources */,
 				F439D1F026006CD800521929 /* Response.swift in Sources */,
 			);
